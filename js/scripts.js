@@ -2,38 +2,25 @@
 var numberTranslate = function(inputString) {
   if ($.isNumeric(inputString)){
     if (inputString < 0){
-      alert("I don't know about that! Only positive numbers can be accepted!")
-    }
-    else return parseInt(inputString)
-  }
-  else alert("Ups! Please enter a valid number!")
+        alert("I don't know about that! Only positive numbers can be accepted!")
+    } else if (inputString.includes(0)) {
+        alert("Beep!");
+    } else if (inputString.includes(1)) {
+        alert("Boop!");
+    } else if (inputString % 3 === 0) {
+          alert("Sorry, Dave!");
+  }  else return parseInt(inputString)
+  }  else
+    alert("Ups! Please enter a valid number!")
 
-}
-// //function to let her know this is a numbers
-// function beepBoop(userNum){
-//   if (userNum >= 1) {
-//     // var returnArray = [];
-//     // var regexOne = /1/g;
-//     // var regexZero = /0/g;
-//     //for (var i = 1; i <= userNum; i++) {
-//       var iString = String(i);
-//       if (!(i % 3)) {
-//         returnArray.push("I'm sorry, Dave. I'm afraid I can't do that.")
-//       } else if (regexOne.test(iString)) {
-//         returnArray.push("Boop!");
-//       } else if (regexZero.test(iString)) {
-//         returnArray.push("Beep!");
-//       } else {
-//         returnArray.push(i);
-//       }
-//     }
-// }
+  }
+
 
 
 //generate the output
 function numConverter(inputNumber){
   for(i=0; i <= inputNumber; i++){
-  $(".output").text[i]
+  $(".output").text(i)
 
   }
 }
@@ -56,6 +43,6 @@ $(document).ready(function(){
 
     //var empty = parseInt("#inputBox")
     // var numInput = parseInt($("#inputBox").val());
-    // $("#outPut").append("<p>[" + loopThroughInput(numInput) + "]<p>");
+
     });
   });
