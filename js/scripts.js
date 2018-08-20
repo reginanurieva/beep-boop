@@ -18,14 +18,20 @@ var numberTranslate = function(inputString) {
 
 
 //generate the output
-function numConverter(inputNumber){
-  for(i=0; i <= inputNumber; i++){
-  $(".output").text(i)
+// function numConverter(inputNumber){
+//   for(i=0; i <= inputNumber; i++){
+//   $(".output").text(i)
+//
+//   }
+// }
 
+function returnAll(inputString){
+  var returnArray = [];
+  for(index = 0; index <= inputString; index += 1){
+    returnArray.push(i);
+    $(".output").text(returnArray)
   }
 }
-
-
 
 
 
@@ -34,12 +40,11 @@ $(document).ready(function(){
   $("#formOne").submit(function(event) {
     event.preventDefault();
     var userNum = $("#inputBox").val();
-    var result = numberTranslate(userNum)
-    var status = numConverter(result)
-    var returnArray = [];
-    var regexOne = /1/g;
-    var regexZero = /0/g;
-    //for (var i = 1; i <= userNum; i++)
+    var result = numberTranslate(userNum);
+    var str = returnAll(returnArray);
+    // var regexOne = /1/g;
+    // var regexZero = /0/g;
+    // for (var i = 1; i <= userNum; i++)
 
     //var empty = parseInt("#inputBox")
     // var numInput = parseInt($("#inputBox").val());
