@@ -1,53 +1,21 @@
-
-var numberTranslate = function(inputString) {
-  if ($.isNumeric(inputString)){
-    if (inputString < 0){
-        alert("I don't know about that! Only positive numbers can be accepted!")
-    } else if (inputString.includes(0)) {
-        alert("Beep!");
-    } else if (inputString.includes(1)) {
-        alert("Boop!");
-    } else if (inputString % 3 === 0) {
-          alert("Sorry, Dave!");
-  }  else return parseInt(inputString)
-  }  else
-    alert("Ups! Please enter a valid number!")
-
+$(document).ready(function() {
+$("#formOne").submit(function(event) {
+event.preventDefault();
+  $(".output").text("");
+  var userInputNum = $("#inputBox").val();
+  var convertedInput = parseInt(userInputNum);
+  for (var i=0; i <= convertedInput; i++){
+    if (i % 3 === 0 && i!=0) {
+      $(".output").append("<li>I'm sorry, Dave. I'm afraid I can't do that!</li>");
+  } else if (i.toString().includes("1")) {
+    $(".output").append("<li>Boop!</li>");
+  } else if (i.toString().includes("0")) {
+    $(".output").append("<li>Beep!</li>");
+  } else {
+    $(".output").append("<li>"+i+"</li>");
+    }
   }
 
+});
 
-
-//generate the output
-// function numConverter(inputNumber){
-//   for(i=0; i <= inputNumber; i++){
-//   $(".output").text(i)
-//
-//   }
-// }
-
-function returnAll(inputString){
-  var returnArray = [];
-  for(index = 0; index <= inputString; index += 1){
-    returnArray.push(i);
-    $(".output").text(returnArray)
-  }
-}
-
-
-
-// User Interface Logic
-$(document).ready(function(){
-  $("#formOne").submit(function(event) {
-    event.preventDefault();
-    var userNum = $("#inputBox").val();
-    var result = numberTranslate(userNum);
-    var str = returnAll(returnArray);
-    // var regexOne = /1/g;
-    // var regexZero = /0/g;
-    // for (var i = 1; i <= userNum; i++)
-
-    //var empty = parseInt("#inputBox")
-    // var numInput = parseInt($("#inputBox").val());
-
-    });
-  });
+});
