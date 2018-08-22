@@ -23,7 +23,7 @@ Program in JavaScript that takes a number and return a range of numbers from zer
   * Output Example: "I'm sorry, Dave. I'm afraid I can't do that".
 5. If any numbers except described above are entered, program will provide user with range of numbers from 0 to the entered number.
   * Input Example: 5
-  * Output Example: 012345
+  * Output Example: Beep Boop 2 I'm sorry, Dave. I'm afraid I can't do that 4 5
 6. The program overrides the previous command with a new one.
   * Input Example: 10
   * Output Example: "Boop!"
