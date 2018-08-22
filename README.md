@@ -37,6 +37,7 @@ Program in JavaScript that takes a number and return a range of numbers from zer
 ## Support and contact details
 
 Regina Nurieva, reggi.nurieva@gmail.com
+
 Web-page is published at https://reginanurieva.github.io/beep-boop/
 
 ## Technologies Used
